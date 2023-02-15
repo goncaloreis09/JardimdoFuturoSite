@@ -38,12 +38,12 @@ function Galeria(){
 
                 {
                     activeTab === 'Obras Públicas' ?
-                        <div className='flex mt-12 space-x-4 flex-wrap'>
+                        <div className='flex mt-12 flex-wrap justify-center'>
                             {
 
                                 images.map((image) => {
                                     return(
-                                        <img src={image.path} alt="" width={400}/>
+                                        <img src={image.path} alt="" className="m-2 xl:h-[400px] xl:w-[500px] w-[400px] h-[300px]"/>
                                     )
                                 })
 

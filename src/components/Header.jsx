@@ -30,7 +30,7 @@ function Header(){
 
     return (
         <header className="h-20">
-            <div className="w-5/6 h-full m-auto flex items-center justify-between">
+            <div className="w-5/6 h-full m-auto flex items-center justify-between z-20">
                 <div className="">
                     <img src={logo} alt="Logotipo da empresa" width={110}/>
                 </div>
@@ -51,11 +51,11 @@ function Header(){
                 
                 {
                     mobile ?
-                    <div className='z-10 absolute right-0 bottom-0 w-screen h-[calc(100vh-5rem)] md:hidden p-10 bg-gray-200 flex flex-col justify-between animate-slideUp'>
+                    <div className='z-10 absolute right-0 bottom-0 w-screen h-[calc(100%-5rem)] md:hidden p-10 bg-gray-200 flex flex-col justify-between animate-slideUp'>
                         <div>
                             {
                                 headerOptions.map((option, index) => 
-                                    <p className='my-6 border-b-2 border-black cursor-pointer' key={index}>{option}</p>
+                                    <p className='my-6 border-b-2 border-black cursor-pointer' key={index} href={option.path}>{option.name}</p>
                                 )
                             }
                         </div>
